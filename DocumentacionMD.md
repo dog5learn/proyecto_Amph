@@ -3,7 +3,7 @@
 
 
 ## Tabla De Contenidos
-- [Introduccion](http://https://github.com/Lobo10/proyecto_Amph/blob/master/DocumentacionMD.md)
+- [Introduccion](http://github.com/Lobo10/proyecto_Amph/blob/master/DocumentacionMD.md)
 - Objetivos
 - Interfaz
 - Código
