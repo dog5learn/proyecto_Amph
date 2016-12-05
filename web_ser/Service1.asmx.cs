@@ -93,6 +93,29 @@ namespace Serv
 
         
         
+        [WebMethod]
+        public DataSet datos(String nombre)
+        {
+
+            sb.Append(" select id_resguardo, id_empleado, nombre,  codigo_equipo, concat (marca, ' ', modelo, ' ', no_modelo) as pc, depto, fecha  FROM resguardo");
+            sb.AppendFormat(" INNER JOIN equipo ON id_equipo = codigo_equipo INNER JOIN usuarios ON no_empleado = id_empleado WHERE nombre = '{0}';", nombre);
+
+            conn = conexion.GetConnection();
+            conn.Open();
+
+            MySqlCommand newCmd = conn.CreateCommand();
+
+            newCmd.CommandType = CommandType.Text;
+            newCmd.CommandText = sb.ToString();
+            newCmd.ExecuteNonQuery();
+
+            MySqlDataAdapter da = new MySqlDataAdapter(newCmd);
+            da.Fill(ds);
+
+            conn.Close();
+            return ds;
+        } 
+
 
 
         [WebMethod]
