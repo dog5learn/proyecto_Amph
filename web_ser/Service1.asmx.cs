@@ -23,11 +23,11 @@ namespace Serv
     
     
         [WebMethod]
-        public DataSet Todo()
+        public DataSet dato_equipo(String cod_equipo)
         {
-            sb.Append("SELECT * FROM dat ");
-            
-            conn = Class1.GetConnection();
+            sb.AppendFormat(" SELECT * FROM equipo WHERE codigo_equipo={0}", cod_equipo);
+
+            conn = conexion.GetConnection();
             conn.Open();
 
             MySqlCommand newCmd = conn.CreateCommand();
@@ -40,9 +40,8 @@ namespace Serv
             da.Fill(ds);
 
             conn.Close();
-            return ds;
-        }
-
+            return ds;  
+        } 
 
 
         [WebMethod]
