@@ -44,6 +44,29 @@ namespace Serv
         } 
 
 
+
+        [WebMethod]
+        public DataSet dato_empleado(String no_empleado)
+        {
+            sb.AppendFormat(" SELECT * FROM usuarios WHERE no_empleado={0}", no_empleado);
+
+            conn = conexion.GetConnection();
+            conn.Open();
+
+            MySqlCommand newCmd = conn.CreateCommand();
+
+            newCmd.CommandType = CommandType.Text;
+            newCmd.CommandText = sb.ToString();
+            newCmd.ExecuteNonQuery();
+
+            MySqlDataAdapter da = new MySqlDataAdapter(newCmd);
+            da.Fill(ds);
+
+            conn.Close();
+            return ds;  
+        }
+
+
         [WebMethod]
         public void Insertar_uno(String nombre, String firma, String depto)
         {
