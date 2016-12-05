@@ -65,6 +65,34 @@ namespace Serv
             conn.Close();
             return ds;  
         }
+       
+        
+        [WebMethod]
+        public void nuevo_resguardo(String id_empleado, String id_equipo)
+        {
+            sb.Append("INSERT INTO resguardo VALUES");
+            sb.AppendFormat("(null,'{0}','{1}',now())", id_empleado, id_equipo);
+
+            conn = conexion.GetConnection();
+            conn.Open();
+
+            MySqlCommand newCmd = conn.CreateCommand();
+
+            newCmd.CommandType = CommandType.Text;
+            newCmd.CommandText = sb.ToString();
+            MySqlDataReader sdr = newCmd.ExecuteReader();
+            String nom = null;
+
+            if (sdr.Read())
+            {
+                nom = sdr.GetValue(0).ToString();
+            }
+
+            conn.Close();
+        }
+
+        
+        
 
 
         [WebMethod]
