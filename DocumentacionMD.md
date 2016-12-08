@@ -39,7 +39,7 @@ El principal problema es:
 - - -
 ##Interfaz
 - En esta sección se muestran las ventanas que requiere el programa para obtener un mayor control dentro de la empresa.<br>
-En la Img.1.0. En la Img.1.0 se muestra la ventana principal, que contiene elementos como nuevo ,buscar ,firmar e imprimir.<br>
+En la Img.1.0 se muestra la ventana principal, que contiene elementos como nuevo ,buscar ,firmar e imprimir.<br>
 ![src='Ventana1.png'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventana1.png)<br>
 Img.1.0. Ventana Principal<br>
 
@@ -55,7 +55,7 @@ Img.1.2. Ventana'Buscar'
 
 - A su vez tenemos dos botones aceptar y cancelar en caso que la firma sea correcta o no sea legible. <br>
 ![src='ventana4'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventana4.png)<br>
-Img.1.4. Ventana 'Firmar'<br>
+Img.1.3. Ventana 'Firmar'<br>
 
 ## Codigo
 - Aqui se realiza la clase conexion.
