@@ -43,10 +43,10 @@ En la Img.1.0. En la Img.1.0 se muestra la ventana principal, que contiene eleme
 ![src='Ventana1.png'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventana1.png)<br>
 Img.1.0. Ventana Principal<br>
 
-- En la Img. 1.1 Observamos la ventana de la opción ‘VentanaNuevo2’<br>
+- En la Img. 1.1 Observamos la ventana de la opción ‘VentanaNuevo’<br>
 ![src='ventana2'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventanaNuevo2.png)<br>
 Img.1.1. Ventana 'Nuevo'<br>
-- En la Img. 1.2 , se muestra la ventana ‘Buscar’ con los campos correspondientes ‘No. Empleado’ , ‘Id Equipo’ <br>![src='ventanaBuscar'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventanaBuscarModif.png)<br>
+- En la Img. 1.2 , se muestra la ventana ‘Buscar’ con los campos correspondientes ‘No. Empleado’ <br>![src='ventanaBuscar'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventanaBuscarModif.png)<br>
 Img.1.2. Ventana'Buscar'
 
 
