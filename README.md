@@ -1,2 +1,8 @@
 # proyecto_Amph
-evaluación primera unidad programacion logica y funcional
+control de resguardo de equipos.
+***
+![logo](https://www.audinate.com/sites/default/files/Logo_Amphenol.png)
+
+***
+
+
