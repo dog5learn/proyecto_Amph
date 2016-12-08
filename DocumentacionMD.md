@@ -3,8 +3,10 @@
 
 
 ## Tabla De Contenidos
-- [Introduccion](http://github.com/Lobo10/proyecto_Amph/blob/master/DocumentacionMD.md)
+
+- Introducción
 - Objetivos
+- Problematica
 - Interfaz
 - Código
 
@@ -26,6 +28,13 @@
 - Evitar perdidas para la empresa.
 
 - Evitar conflictos.
+- - -
+## Problemática
+El principal problema es:
+
+- Mala organización de los archivos.
+- Perdida de documentos.
+- No tener control de la informacion.
 
 - - -
 ##Interfaz
@@ -34,17 +43,15 @@ En la Img.1.0. En la Img.1.0 se muestra la ventana principal, que contiene eleme
 ![src='Ventana1.png'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventana1.png)<br>
 Img.1.0. Ventana Principal<br>
 
-- En la Img. 1.1 Observamos la ventana de la opción ‘Nuevo’<br>
-![src='ventana2'](https://github.com/Lobo10/proyecto_Amph/blob/master/Ventana2.png)<br>
+- En la Img. 1.1 Observamos la ventana de la opción ‘VentanaNuevo2’<br>
+![src='ventana2'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventanaNuevo2.png)<br>
 Img.1.1. Ventana 'Nuevo'<br>
-- En la Img. 1.2 , se muestra la ventana ‘Buscar’ con los campos correspondientes ‘No. Empleado’ , ‘Id Equipo’ <br>![src='ventana3'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventana3.png)<br>
+- En la Img. 1.2 , se muestra la ventana ‘Buscar’ con los campos correspondientes ‘No. Empleado’ , ‘Id Equipo’ <br>![src='ventanaBuscar'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventanaBuscarModif.png)<br>
 Img.1.2. Ventana'Buscar'
-- Después de dar click en el botón ‘buscar’ , buscara si se encuentra guardado el documento y nos abrirá una ventana con los datos guardados.
 
-- Como podemos observar en la Img. 1.3 , nos muestra en este formato como se vería la información guardada<br>
-![src='ventana5'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventana5.png)<br>
-Img.1.3. Ventana 'Responsiva'<br>
-- La Img. 1.4 , muestra la ventana ‘Firmar’ , que nos indica en el recuadro donde se encuentra la firma .
+
+<br>
+- La Img. 1.3 , muestra la ventana ‘Firmar’ , que nos indica en el recuadro donde se encuentra la firma .
 
 - A su vez tenemos dos botones aceptar y cancelar en caso que la firma sea correcta o no sea legible. <br>
 ![src='ventana4'](https://github.com/Lobo10/proyecto_Amph/blob/master/ventana4.png)<br>
@@ -54,11 +61,6 @@ Img.1.4. Ventana 'Firmar'<br>
 - Aqui se realiza la clase conexion.
 
 
-		using System;
-		using System.Collections.Generic;
-		using System.Linq;
-		using System.Web;
-		using MySql.Data.MySqlClient;
 
 	 	namespace Serv
 	 	{
@@ -81,14 +83,7 @@ Img.1.4. Ventana 'Firmar'<br>
 - En nuestro servicio web se establecen los metodos de  acceso a la base de datos.
 
 
-		using System;
-        using System.Collections.Generic;
-		using System.Linq;
-		using System.Web;
-		using System.Web.Services;
-		using MySql.Data.MySqlClient;
-		using System.Text;
-		using System.Data;
+		
 
 		namespace Serv
 		{
