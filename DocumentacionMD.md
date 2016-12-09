@@ -1,5 +1,5 @@
 
-#<Center>Proyecto Amphenol
+#<Center> Proyecto Amphenol
 
 
 ## Tabla De Contenidos
