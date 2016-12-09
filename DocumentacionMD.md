@@ -124,10 +124,10 @@ Img.1.3. Ventana 'Firmar'<br>
 
 
         	[WebMethod]
-        	public void Insertar_uno(String nombre, String firma, String 			 depto)
+        	public void Insertar_uno(String nombre, String firma, String depto)
         	{
             	sb.Append("INSERT INTO dat VALUES");
-            	sb.AppendFormat("(null,'{0}','{1}','{2}')", nombre, firma, 			   depto);
+            	sb.AppendFormat("(null,'{0}','{1}','{2}')", nombre, firma, depto);
 
             	conn= Class1.GetConnection();
             	conn.Open();
@@ -149,10 +149,10 @@ Img.1.3. Ventana 'Firmar'<br>
 
 
         	[WebMethod]
-        	public void UP(String no_empleado, String nombre, String firma, 		  String depto)
+        	public void UP(String no_empleado, String nombre, String firma,  String depto)
         	{
             	sb.Append(" UPDATE dat SET");
-            	sb.AppendFormat(" nombre='{1}',firma='{2}',depto='{3}' WHERE 			 no_empleado={0};", no_empleado, nombre, firma, depto);
+            	sb.AppendFormat(" nombre='{1}',firma='{2}',depto='{3}' WHERE no_empleado={0};", no_empleado, nombre, firma, 	                depto);
 
             	conn = Class1.GetConnection();
             	conn.Open();
