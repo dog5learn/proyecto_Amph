@@ -60,37 +60,23 @@ Img.1.3. Ventana 'Firmar'<br>
 ## Codigo
 - Aqui se realiza la clase conexion.
 
-
-
-	 	namespace Serv
-	 	{
-      	public class Class1
-      	{
+***
         	public static MySqlConnection NewCon;
         	public static string ConStr = "Server=localhost;Port=3306;
-            Database=test;Uid=root;Pwd= ;";
+            	Database=test;Uid=root;Pwd= ;";
 
         	public static MySqlConnection GetConnection()
         	{
             	NewCon = new MySqlConnection(ConStr);
             	return NewCon;
         	}
-       	}
-
-       }
+***
 
 - - -
-- En nuestro servicio web se establecen los metodos de  acceso a la base de datos.
+- En el servicio web se establecen los metodos de  acceso a la base de datos.
 
 
-		
-
-		namespace Serv
-		{
-
-    	[WebService(Namespace = "http://tempuri.org/")]
-    	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-    	[System.ComponentModel.ToolboxItem(false)]
+***
 
     	public class Service1 : System.Web.Services.WebService
     	{
@@ -104,25 +90,15 @@ Img.1.3. Ventana 'Firmar'<br>
         	public DataSet Todo()
         	{
             	sb.Append("SELECT * FROM dat ");
-            
-            	conn = Class1.GetConnection();
-            	conn.Open();
-
-            	MySqlCommand newCmd = conn.CreateCommand();
-
-            	newCmd.CommandType = CommandType.Text;
-            	newCmd.CommandText = sb.ToString();
-            	newCmd.ExecuteNonQuery();
-
+           
             	MySqlDataAdapter da = new MySqlDataAdapter(newCmd);
             	da.Fill(ds);
 
             	conn.Close();
             	return ds;
         	}
-
-
-
+		
+***
         	[WebMethod]
         	public void Insertar_uno(String nombre, String firma, String depto)
         	{
@@ -133,19 +109,11 @@ Img.1.3. Ventana 'Firmar'<br>
             	conn.Open();
 
             	MySqlCommand newCmd = conn.CreateCommand();
-
-            	newCmd.CommandType = CommandType.Text;
-            	newCmd.CommandText = sb.ToString();
             	MySqlDataReader sdr = newCmd.ExecuteReader();
-            	String nom = null;
-
-            	if (sdr.Read())
-            	{
-                	nom = sdr.GetValue(0).ToString();
-            	}
-
+		
             	conn.Close();       
         	}
+***
 
 
         	[WebMethod]
@@ -158,45 +126,10 @@ Img.1.3. Ventana 'Firmar'<br>
             	conn.Open();
 
             	MySqlCommand newCmd = conn.CreateCommand();
-
             	newCmd.CommandType = CommandType.Text;
-            	newCmd.CommandText = sb.ToString();
             	MySqlDataReader sdr = newCmd.ExecuteReader();
-            	String nom = null;
-
-            	if (sdr.Read())
-            	{
-                	nom = sdr.GetValue(0).ToString();
-            	}
 
             	conn.Close();
         	}
 
-
-        	[WebMethod]
-        	public void Borra_uno(String id)
-        	{
-            	sb.Append(" DELETE FROM dat");
-            	sb.AppendFormat(" WHERE no_empleado={0};", id);
-
-            	conn = Class1.GetConnection();
-            	conn.Open();
-
-            	MySqlCommand newCmd = conn.CreateCommand();
-
-            	newCmd.CommandType = CommandType.Text;
-            	newCmd.CommandText = sb.ToString();
-            	MySqlDataReader sdr = newCmd.ExecuteReader();
-            	String nombre = null;
-
-            	if (sdr.Read())
-            	{
-                	nombre = sdr.GetValue(0).ToString();
-            	}
-
-            	conn.Close();    
-        	}
-            
-       	}
-
-      	}
+***
