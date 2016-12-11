@@ -72,7 +72,6 @@ Img.1.3. Ventana 'Firmar'<br>
         	}
 ***
 
-- - -
 - En el servicio web se establecen los metodos de  acceso a la base de datos.
 
 
